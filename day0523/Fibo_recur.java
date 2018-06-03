@@ -1,5 +1,3 @@
-package zDay0523;
-
 public class Fibo_recur {
 
 	public static void main(String[] args) {

@@ -1,5 +1,3 @@
-package zDay0523;
-
 public class Fibo_memo {
 
 	static int memo[];

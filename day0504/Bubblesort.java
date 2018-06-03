@@ -1,11 +1,11 @@
-package zDay0504;
+package day0504;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-//Array 5Â÷½Ã 3:21
+//Array 5Ã‚Ã·Â½Ãƒ 3:21
 public class Bubblesort {
 
 	public static void main(String[] args) throws IOException {

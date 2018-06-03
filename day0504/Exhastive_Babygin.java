@@ -1,4 +1,4 @@
-package zDay0504;
+package day0504;
 
 import java.io.BufferedReader;
 import java.io.IOException;

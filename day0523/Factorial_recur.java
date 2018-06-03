@@ -1,5 +1,3 @@
-package zDay0523;
-
 import java.util.Scanner;
 
 public class Factorial_recur {

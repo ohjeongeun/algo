@@ -1,5 +1,3 @@
-package zDay0523;
-
 public class Fibo_dp {
 	static int n=10;
 	static int fibo[];

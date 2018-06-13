@@ -3,7 +3,7 @@ package day0613;
 
 public class MergeSort {
 
-	public static int[] temp = new int[8]; //Á¤·ÄµÇ¾î µé¾î°¥ ¹è¿­
+	public static int[] temp = new int[8]; //ì •ë ¬ë˜ì–´ ë“¤ì–´ê°ˆ ë°°ì—´
 	
 	public static void main(String[] args) {
 		int arr[] = {69, 10, 30, 2, 16, 8, 31, 22};
@@ -22,11 +22,11 @@ public class MergeSort {
 			
 			middle = (start+end)/2;
 			
-			//listÀÇ ±æÀÌ°¡ 1ÀÌ µÉ ¶§±îÁö Àç±Í È£Ãâ
+			//listì˜ ê¸¸ì´ê°€ 1ì´ ë  ë•Œê¹Œì§€ ì¬ê·€ í˜¸ì¶œ
 			mergeSort(arr, start, middle);
 			mergeSort(arr, middle+1, end);
 			
-			//º´ÇÕ
+			//ë³‘í•©
 			merge(arr, start, middle, end);
 		}
 	}
@@ -34,14 +34,14 @@ public class MergeSort {
 	//merge
 	public static void merge(int arr[], int start, int middle, int end) {
 		
-		int i=start;     // left ~ middle
-		int j=middle+1; //middle+1 ~ right
+		int i=start;     // start ~ middle
+		int j=middle+1; //middle+1 ~ end
 		
-		int k=start; //µÎ °³ÀÇ ºĞÇÒµÈ list¸¦ º´ÇÕÇÏ¿© ÀÓ½Ã·Î ÀúÀåÇÒ ¹è¿­ÀÇ index
+		int k=start; //ë‘ ê°œì˜ ë¶„í• ëœ listë¥¼ ë³‘í•©í•˜ì—¬ ì„ì‹œë¡œ ì €ì¥í•  ë°°ì—´ì˜ index
 		
-		//µÎ ¼­ºê listÀÇ Ã¹ ¿ø¼Òµé ºñ±³
+		//ë‘ ì„œë¸Œ listì˜ ì²« ì›ì†Œë“¤ ë¹„êµ
 		while(i<=middle && j<=end) {
-			//ÀÛÀº°Í ºÎÅÍ Ãß°¡
+			//ì‘ì€ê²ƒ ë¶€í„° ì¶”ê°€
 			if(arr[i] <= arr[j]) {
 				temp[k] = arr[i];
 				k++; i++; 
@@ -49,17 +49,17 @@ public class MergeSort {
 			}else {
 				
 				temp[k] = arr[j];
-				k++; j++;//´ÙÀ½ °ªÀ» ³Ö±â À§ÇØ Áõ°¡
+				k++; j++;//ë‹¤ìŒ ê°’ì„ ë„£ê¸° ìœ„í•´ ì¦ê°€
 			}
 		}
 		
-		//¿ŞÂÊ list¿¡ ¿ø¼Ò°¡ ³²¾ÆÀÖÀ» °æ¿ì
+		//ì™¼ìª½ listì— ì›ì†Œê°€ ë‚¨ì•„ìˆì„ ê²½ìš°
 		while(i<=middle) {
 			temp[k] = arr[i];
 			k++; i++;
 		}
 		
-		//¿À¸¥ÂÊ list¿¡ ¿ø¼Ò°¡ ³²¾ÆÀÖÀ» °æ¿ì
+		//ì˜¤ë¥¸ìª½ listì— ì›ì†Œê°€ ë‚¨ì•„ìˆì„ ê²½ìš°
 		while(j<=end) {
 			temp[k] = arr[j];
 			k++; j++;
